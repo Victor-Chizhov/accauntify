@@ -42,6 +42,11 @@
               {{ $t('footer.action') }}
             </a>
           </p>
+          <p class="opacity-75">
+            <a href="#!" class="text-decoration-none text-white">
+              {{ $t('footer.license') }}
+            </a>
+          </p>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
           <h6 class="text-uppercase fw-bold mb-4">
