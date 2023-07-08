@@ -24,6 +24,20 @@ import Steps from "@/components/Steps.vue";
 import Banks from "@/components/Banks.vue";
 import Questions from "@/components/Questions.vue";
 import Form from "@/components/Form.vue";
+import { useSeoMeta } from 'unhead'
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
+
+useSeoMeta({
+    author: t('company'),
+    title: t('meta.title'),
+    description: t('meta.description'),
+    keywords: t('meta.keywords'),
+    ogTitle: t('meta.title'),
+    ogDescription: t('meta.description'),
+    ogSiteName: t('company')
+})
 
 </script>
 
