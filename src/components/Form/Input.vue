@@ -1,7 +1,19 @@
 <template>
   <div class="form-floating">
-    <input type="{{ type }}" class="form-control" placeholder="{{ placeholder }}" id="{{ id }}" />
-    <label for="{{ id }}" class="text-muted">{{ label }}</label>
+    <input
+      :type="type"
+      class="form-control"
+      :placeholder="placeholder"
+      :id="id"
+      :value="modelValue"
+      @input="$emit('update:modelValue', $event.target.value)"
+    />
+    <label
+      :for="id"
+      class="text-muted"
+    >
+      {{ label }}
+    </label>
   </div>
 </template>
 
@@ -10,8 +22,13 @@ defineProps({
     type: String,
     placeholder: String,
     label: String,
-    id: String
+    id: String,
+    value: String,
+    modelValue: String
 })
+defineEmits([
+    'update:modelValue'
+]);
 </script>
 
 <style scoped>

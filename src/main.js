@@ -8,7 +8,7 @@ import { faHome, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { createApp } from 'vue'
 import { createI18n } from 'vue-i18n'
 import { createHead } from 'unhead'
-import { createRouter } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import App from './App.vue'
 
 const LANGUAGE_DEFAULT = 'ru';
@@ -23,6 +23,8 @@ const i18n = createI18n({
 
 const head = createHead();
 const router = createRouter({
+    // todo for prod we can delete it
+    history: createWebHashHistory(),
     routes: [],
     scrollBehavior(to, from, savedPosition) {
         if (to.hash) {

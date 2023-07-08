@@ -21,6 +21,7 @@
                 id="name"
                 :placeholder="$t('form.inputs.name.placeholder')"
                 class="mb-4"
+                v-model="name"
               />
               <Input
                 type="tel"
@@ -28,6 +29,7 @@
                 id="phone"
                 :placeholder="$t('form.inputs.phone.placeholder')"
                 class="mb-4"
+                v-model="phone"
               />
               <Button
                 :text="$t('form.buttons.submit.name')"
@@ -45,9 +47,12 @@
 </template>
 
 <script setup>
-
+import { ref } from "vue";
 import Input from "@/components/Form/Input.vue";
 import Button from "@/components/Form/Button.vue";
+
+const name = ref(null);
+const phone = ref(null);
 </script>
 
 <style scoped>
