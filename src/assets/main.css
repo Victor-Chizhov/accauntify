@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body, html {
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --bs-font-sans-serif: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--bs-font-sans-serif);
+  font-weight: 600;
+}
