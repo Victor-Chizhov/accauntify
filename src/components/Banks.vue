@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="row">
+    <div class="row mb-5 py-5">
       <h1>
         {{ $t('banks.title') }}
       </h1>

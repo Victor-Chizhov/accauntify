@@ -11,7 +11,7 @@
             class="accordion"
             id="accordionPanelsStayOpenExample"
         >
-          <div class="accordion-item">
+          <div class="accordion-item border-top-0">
             <h2
                 class="accordion-header"
                 id="panelsStayOpen-headingOne"

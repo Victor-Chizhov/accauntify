@@ -8,10 +8,11 @@
     </div>
   <Form id="trial" />
   <div class="container">
+    <About id="about"/>
     <Banks />
-    <Questions />
+    <Questions id="questions"/>
   </div>
-  <Footer />
+  <Footer id="contacts"/>
 </template>
 
 <script setup>
@@ -26,6 +27,7 @@ import Questions from "@/components/Questions.vue";
 import Form from "@/components/Form.vue";
 import { useSeoMeta } from 'unhead'
 import { useI18n } from "vue-i18n";
+import About from "@/components/About.vue";
 
 const { t } = useI18n();
 
