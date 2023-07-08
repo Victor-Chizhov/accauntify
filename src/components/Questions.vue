@@ -2,7 +2,9 @@
   <section>
     <div class="row mt-5 mb-5 bg-color">
       <div class="col-sm-5 mt-5">
-        <h1 class="text-dark">Частые вопросы</h1>
+        <h1 class="text-dark">
+          {{ $t('questions.title') }}
+        </h1>
       </div>
       <div class="col-sm-6 mt-5 text-dark fs-6">
         <div
@@ -22,7 +24,7 @@
                   aria-expanded="false"
                   aria-controls="panelsStayOpen-collapseOne"
               >
-                Как уплачивать налоги и взносы?
+                {{ $t('questions.1.title') }}
               </button>
             </h2>
             <div
@@ -32,13 +34,10 @@
             >
               <div class="accordion-body">
                 <p>
-                  Когда наступит время уплатить налоги и страховые взносы,
-                  мы отправим вам уведомление в смс и на почту.
+                  {{ $t('questions.1.description', 1) }}
                 </p>
                 <p>
-                  В разделе «Онлайн-бухгалтерия» в вашем интернет-банке
-                  уже будут сформированы нужные платежи — останется
-                  только отправить их нажатием одной кнопки.
+                  {{ $t('questions.1.description', 2) }}
                 </p>
               </div>
             </div>
@@ -56,7 +55,7 @@
                   aria-expanded="false"
                   aria-controls="panelsStayOpen-collapseTwo"
               >
-                Я открыл ИП и вообще не знаю, что дальше делать. Как быть?
+                {{ $t('questions.2.title') }}
               </button>
             </h2>
             <div
@@ -65,16 +64,14 @@
                 aria-labelledby="panelsStayOpen-headingTwo"
             >
               <div class="accordion-body">
-                <p>Поздравляем с открытием ИП!</p>
                 <p>
-                  После открытия ИП, откройте расчетный счет в банке и используйте онлайн-бухгалтерию для учета доходов
-                  и расходов.
-                  Регулярно подавайте налоговую отчетность в налоговую службу и соблюдайте налоговые обязательства,
-                  следуя требованиям и срокам.
+                  {{ $t('questions.2.description', 0) }}
                 </p>
                 <p>
-                  При необходимости, вы всегда можете обратиться к нам, наши месенджеры, электронная почта и соцсети
-                  доступны в любое время.
+                  {{ $t('questions.2.description', 1) }}
+                </p>
+                <p>
+                  {{ $t('questions.2.description', 2) }}
                 </p>
               </div>
             </div>
@@ -91,17 +88,39 @@
                   aria-expanded="false"
                   aria-controls="panelsStayOpen-collapseThree"
               >
-                Accordion Item #3
+                {{ $t('questions.3.title') }}
               </button>
             </h2>
             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
                  aria-labelledby="panelsStayOpen-headingThree">
               <div class="accordion-body">
-                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
-                plugin adds the appropriate classes that we use to style each element. These classes control the overall
-                appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
-                within the <code>.accordion-body</code>, though the transition does limit overflow.
+                <p>
+                  {{ $t('questions.3.description') }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2
+              class="accordion-header"
+              id="panelsStayOpen-headingFour">
+              <button
+                class="accordion-button collapsed fs-4 my-3"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseFour"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseFour"
+              >
+                {{ $t('questions.4.title') }}
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                 aria-labelledby="panelsStayOpen-headingFour">
+              <div class="accordion-body">
+                <p>
+                  {{ $t('questions.4.description') }}
+                </p>
               </div>
             </div>
           </div>

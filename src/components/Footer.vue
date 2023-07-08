@@ -1,39 +1,68 @@
 <template>
-  <section>
-    <div class="bg-color">
-      <div class="container">
-        <div class="row mt-6">
-          <div class="col-sm-3">
-            <div class="py-5">
-              <div class="text-light">
-                <img src="../assets/logo_white.svg" alt="">
-                <p>Армения и регионы</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="pt-5 text-light fs-6">
-              <p>
-                Адрес: 0015, г. Ереван, Григора Лусаворича, 9
+  <!-- Footer -->
+  <footer class="bg-color text-white mt-6">
+    <div class="container">
+      <div class="row py-5">
+        <div class="col-12 col-md-6 col-lg-5">
+          <div class="row">
+            <div class="col-12 col-lg-8">
+              <img src="../assets/logo_white.svg" alt="" width="200" class="mb-3">
+              <p class="opacity-75">
+                {{ $t('footer.description') }}
               </p>
-              <p class="copy">
-                © 2022—2023, Интернет-бухгалтерия «Accountify»
-              </p>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="pt-5 pb-1 text-light ">
-              <p class="text-footer">Электронная почта:</p>
-              <a class="text-link" href="mailto:info@accountfy.com"><p>info@accountfy.com</p></a>
-            </div>
-            <div class="text-light pb-5">
-              <p class="text-footer">Техническая поддержка:</p>
-              <a class="text-link" href="mailto:support@accountfy.com"><p>support@accountfy.com</p></a>
             </div>
           </div>
         </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h6 class="text-uppercase fw-bold mb-4 text-white">
+            {{ $t('footer.useful') }}
+          </h6>
+          <p class="opacity-75">
+            <a href="#!" class="text-decoration-none text-white">
+              {{ $t('footer.about') }}
+            </a>
+          </p>
+          <p class="opacity-75">
+            <a href="#features" class="text-decoration-none text-white">
+              {{ $t('footer.features') }}
+            </a>
+          </p>
+          <p class="opacity-75">
+            <a href="#trial" class="text-decoration-none text-white">
+              {{ $t('footer.trial') }}
+            </a>
+          </p>
+          <p class="opacity-75">
+            <a href="#!" class="text-decoration-none text-white">
+              {{ $t('footer.action') }}
+            </a>
+          </p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <h6 class="text-uppercase fw-bold mb-4">
+            {{ $t('footer.contacts') }}
+          </h6>
+          <p class="opacity-75">
+            <font-awesome-icon icon="fa-solid fa-home" class="me-3" />
+            {{ $t('footer.address') }}
+          </p>
+          <p class="opacity-75">
+            <font-awesome-icon icon="fa-solid fa-envelope" class="me-3" />
+            info@accountify.site
+          </p>
+          <p class="opacity-75">
+            <font-awesome-icon icon="fa-solid fa-phone" class="me-3" />
+            + 374 55 498401
+          </p>
+        </div>
       </div>
-    </div></section>
+    </div>
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.35);">
+      © 2021 Copyright {{ $t('company') }}
+    </div>
+    <!-- Copyright -->
+  </footer>
 </template>
 
 <script setup>
@@ -50,22 +79,4 @@
   background-color: #537379;
   background-size: cover;
 }
-
-.text-footer {
-  margin: 0;
-  padding: 0;
-}
-
-.copy {
-  margin-top: 1rem;
-  font-size: 0.8rem;
-  color: #B8D0D8;
-}
-
-.text-link {
-  color: #8ed098;
-  text-decoration: none;
-}
-
-
 </style>

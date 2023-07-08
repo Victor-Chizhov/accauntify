@@ -1,15 +1,16 @@
 <template>
   <section>
-      <h1 class="mb-4">Справитесь без бухгалтера</h1>
+      <h1 class="mb-5">
+        {{ $t('body.title') }}
+      </h1>
       <div class="row img-body__top my-3 ms-1 me-1">
         <div class="col-10 col-sm-8 col-md-6 col-xl-5 offset-1">
           <div class="py-5 text-light">
             <h1 class="mb-4">
-              Несложная отчетность
+              {{ $t('body.1.title') }}
             </h1>
             <p class="fs-5 mb-5">
-              Персональный налоговый календарь, отправка отчётности в налоговую и фонды,
-              автоматический аудит ошибок, обмен данными с банками и получение выписок.
+              {{ $t('body.1.description') }}
             </p>
           </div>
         </div>
@@ -19,10 +20,10 @@
         <div class="col-10 col-sm-8 col-md-9 col-xl-6 offset-1">
         <div class="py-5 text-light">
           <h1 class="mb-4 fs-2">
-            Быстрые документы
+            {{ $t('body.2.title') }}
           </h1>
           <p class="fs-6 mb-3">
-            Создавайте акты, накладные, счета, УПД, и договоры за несколько кликов.
+            {{ $t('body.2.description') }}
           </p>
         </div>
         </div>
@@ -31,10 +32,10 @@
         <div class="col-10 col-sm-8 col-md-9 col-xl-6 offset-1">
           <div class="py-5 text-light">
             <h1 class="mb-4 fs-2">
-              Работа с сотрудниками
+              {{ $t('body.3.title') }}
             </h1>
             <p class="fs-6 mb-3">
-              Система подготовит платежки на зарплату, налоги и взносы за сотрудников.
+              {{ $t('body.3.description') }}
             </p>
           </div>
         </div>

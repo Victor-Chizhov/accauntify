@@ -3,10 +3,10 @@
   <div class="container">
     <Hero/>
     <Advantages />
-    <Body/>
+    <Body id="features"/>
     <Steps />
     </div>
-  <Form />
+  <Form id="trial" />
   <div class="container">
     <Banks />
     <Questions />

@@ -2,7 +2,7 @@
   <section>
     <div class="row">
       <h1>
-        Интеграция с банками — все операции появятся в Accountify автоматически
+        {{ $t('banks.title') }}
       </h1>
       <div class="col-sm mt-5">
         <img class="img-bank" src="../assets/banks/evoca.png" alt="">

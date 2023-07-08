@@ -4,19 +4,20 @@
       <div class="col-10 col-sm-8 col-md-6 col-xl-5 offset-1">
         <div class="py-5">
           <h1 class="mb-4">
-            Удобная бухгалтерия для вашего бизнеса
+            {{ $t('hero.title') }}
           </h1>
           <p class="fs-5 mb-5">
-            Выберите способ ведения бухгалтерии и освободите время для решения важных задач
+            {{ $t('hero.description') }}
           </p>
-
-          <!-- import from quiz -->
-          <button
+          <div class="pt-lg-5">
+            <!-- import from quiz -->
+            <button
               class="btn btn-primary"
               type="button"
-          >
-            Рассчитать стоимость
-          </button>
+            >
+              Рассчитать стоимость
+            </button>
+          </div>
         </div>
       </div>
     </div>

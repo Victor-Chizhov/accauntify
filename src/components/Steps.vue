@@ -1,6 +1,8 @@
 <template>
   <section>
-    <h1 class="mt-6">Начните работать в сервисе в 3 простых шага</h1>
+    <h1 class="mt-6">
+      {{ $t('steps.title') }}
+    </h1>
     <div class="row my-5 ms-4 me-4">
       <div class="col-sm me-4">
         <div class="row">
@@ -8,10 +10,11 @@
             <img class="img-one" src="../assets/numbers/1.png" alt="">
           </div>
           <div class="row-8">
-            <h1 class="fs-5 pb-2">Оставьте заявку</h1>
+            <h1 class="fs-5 pb-2">
+              {{ $t('steps.1.title') }}
+            </h1>
             <p>
-              Всем пользователям доступен пробный период
-              для знакомства с интерфейсом и функционалом.
+              {{ $t('steps.1.description') }}
             </p>
           </div>
         </div>
@@ -22,10 +25,11 @@
             <img class="img-two" src="../assets/numbers/2.png" alt="">
           </div>
           <div class="row-8">
-            <h1 class="fs-5 pb-2">Выберите тариф</h1>
+            <h1 class="fs-5 pb-2">
+              {{ $t('steps.2.title') }}
+            </h1>
             <p>
-              Вам позвонит наш менеджер и поможет выбрать тариф
-              исходя из параметров вашей компании.
+              {{ $t('steps.2.description') }}
             </p>
           </div>
         </div>
@@ -36,10 +40,11 @@
             <img class="img-three" src="../assets/numbers/3.png" alt="">
           </div>
           <div class="row-8">
-            <h1 class="fs-5 pb-2">Начните работу</h1>
+            <h1 class="fs-5 pb-2">
+              {{ $t('steps.3.title') }}
+            </h1>
             <p>
-              Вместе с менеджером настройте кабинет
-              под вашу компанию и начните использовать сервис уже сегодня.
+              {{ $t('steps.3.description') }}
             </p>
           </div>
         </div>

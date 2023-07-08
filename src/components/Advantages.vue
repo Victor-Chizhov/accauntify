@@ -7,9 +7,11 @@
             <img class="img-advantages" src="../assets/banner_2_reference/galochka.jpg" alt="">
           </div>
           <div class="col-10">
-            <h1 class="fs-5 pb-2">Решение для каждого</h1>
-            <p>Вы можете вести бухгалтерию самостоятельно
-              с помощью онлайн-сервиса или передать профессионалам
+            <h1 class="fs-5 pb-2">
+              {{ $t('advantages.1.title') }}
+            </h1>
+            <p>
+              {{ $t('advantages.1.description') }}
             </p>
           </div>
         </div>
@@ -20,8 +22,12 @@
             <img class="img-advantages" src="../assets/banner_2_reference/galochka.jpg" alt="">
           </div>
           <div class="col-10">
-            <h1 class="fs-5 pb-2">Дружелюбный интерфейс</h1>
-            <p>Интуитивно понятный сервис — все нужное под рукой.</p>
+            <h1 class="fs-5 pb-2">
+              {{ $t('advantages.2.title') }}
+            </h1>
+            <p>
+              {{ $t('advantages.2.description') }}
+            </p>
           </div>
         </div>
       </div>
@@ -31,8 +37,12 @@
             <img class="img-advantages" src="../assets/banner_2_reference/galochka.jpg" alt="">
           </div>
           <div class="col-10">
-            <h1 class="fs-5 pb-2">Забота о вашем бизнесе 24/7</h1>
-            <p>Мессенджеры, электронная почта и соцсети — в любое время.</p>
+            <h1 class="fs-5 pb-2">
+              {{ $t('advantages.3.title') }}
+            </h1>
+            <p>
+              {{ $t('advantages.3.description') }}
+            </p>
           </div>
         </div>
       </div>
