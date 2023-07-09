@@ -1,3 +1,6 @@
+import { locale, LANGUAGE_DEFAULT } from "@/main";
+import messages from "@/messages";
+
 const maskList = [
     { "code": "+247 ####" },
     { "code": "+290 ####" },
@@ -295,7 +298,7 @@ const maskList = [
     { "code": "+850 #### #############" }
 ];
 
-const phoneMask = (value) => {
+export const phoneMask = (value) => {
     let matrix = '+###############';
 
     if (!value.startsWith('+')) {
@@ -319,4 +322,37 @@ const phoneMask = (value) => {
     });
 }
 
-export default phoneMask;
+export const isEmpty = (value) => {
+    return !value || value.length === 0;
+}
+
+export const clearErrors = (ref) => {
+    const value = ref.value;
+
+    if (typeof value === 'object') {
+        Object.keys(value).forEach((i) => value[i] = null);
+    }
+}
+
+export const requiredError = (ref, key = null) => {
+    const value = ref.value;
+
+    if (typeof value === 'object' && key) {
+        let lang = locale;
+        let message = 'Required field';
+        let validation = null;
+
+        if (!(locale in messages)) {
+            lang = LANGUAGE_DEFAULT;
+        }
+        validation = messages[lang]['validation'];
+        if (validation) {
+            if ('required' in validation) {
+                message = validation['required']
+            }
+        }
+        ref.value[key] = message;
+    }
+
+    return false;
+}

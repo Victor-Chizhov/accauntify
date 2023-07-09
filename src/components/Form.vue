@@ -20,21 +20,24 @@
                 :label="$t('form.inputs.name.label')"
                 id="name"
                 :placeholder="$t('form.inputs.name.placeholder')"
-                class="mb-4"
+                class="mb-4 required"
                 v-model="name"
+                :error="errors.name"
               />
               <Input
                 type="tel"
                 :label="$t('form.inputs.phone.label')"
                 id="phone"
                 :placeholder="$t('form.inputs.phone.placeholder')"
-                class="mb-4"
+                class="mb-4 required"
                 v-model="phone"
                 v-maska:[options]
+                :error="errors.phone"
               />
               <Button
                 :text="$t('form.buttons.submit.name')"
                 class="w-100 mb-3"
+                @click="handleSubmit"
               />
               <p class="text-secondary text-center">
                 <small v-html="$t('form.buttons.submit.hint', { link: '/privacy-policy' })" />
@@ -51,9 +54,40 @@
 import { ref } from "vue";
 import Input from "@/components/Form/Input.vue";
 import Button from "@/components/Form/Button.vue";
+import { reactive } from "vue"
+import {
+    phoneMask,
+    isEmpty,
+    clearErrors,
+    requiredError
+} from "@/inputs";
+
+const options = reactive({
+    mask: (value) => phoneMask(value),
+    eager: false,
+})
 
 const name = ref(null);
 const phone = ref(null);
+const errors = ref({
+    name: null,
+    phone: null
+});
+
+const handleSubmit = () => {
+    clearErrors(errors);
+
+    if (isEmpty(name.value)) {
+        return requiredError(errors, 'name');
+    }
+
+    if (isEmpty(phone.value)) {
+        return requiredError(errors, 'phone');
+    }
+
+    // todo request
+}
+
 </script>
 
 <style scoped>

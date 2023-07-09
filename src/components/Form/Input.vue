@@ -2,7 +2,7 @@
   <div class="form-floating">
     <input
       :type="type"
-      class="form-control"
+      :class="{'form-control': true, 'is-invalid': error }"
       :placeholder="placeholder"
       :id="id"
       :value="modelValue"
@@ -14,6 +14,9 @@
     >
       {{ label }}
     </label>
+    <div v-if="error" class="invalid-feedback">
+      {{ error }}
+    </div>
   </div>
 </template>
 
@@ -24,7 +27,8 @@ defineProps({
     label: String,
     id: String,
     value: String,
-    modelValue: String
+    modelValue: String,
+    error: String
 })
 defineEmits([
     'update:modelValue'
@@ -32,5 +36,13 @@ defineEmits([
 </script>
 
 <style scoped>
+
+.form-floating.required label:after {
+    content: "*";
+    color: red;
+    top: 0;
+    position: relative;
+    margin-left: 3px;
+}
 
 </style>

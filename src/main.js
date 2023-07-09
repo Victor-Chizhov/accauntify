@@ -12,16 +12,16 @@ import { createHead } from 'unhead'
 import { createRouter, createWebHashHistory } from "vue-router";
 import App from './App.vue'
 
-const LANGUAGE_DEFAULT = 'ru';
-const url = new URL(window.location.href);
-const locale = url.pathname.split('/')[1];
+export const LANGUAGE_DEFAULT = 'ru';
+export const url = new URL(window.location.href);
+export const locale = url.pathname.split('/')[1];
+
 const i18n = createI18n({
     legacy: false,
     locale: locale,
     fallbackLocale: LANGUAGE_DEFAULT,
     messages,
 });
-
 const head = createHead();
 const router = createRouter({
     // todo for prod we can delete it
