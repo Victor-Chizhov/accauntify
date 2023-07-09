@@ -13,7 +13,7 @@ import App from './App.vue'
 
 const LANGUAGE_DEFAULT = 'ru';
 const url = new URL(window.location.href);
-const locale = url.pathname.replace(/\//g,'');
+const locale = url.pathname.split('/')[1];
 const i18n = createI18n({
     legacy: false,
     locale: locale,
