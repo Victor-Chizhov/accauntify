@@ -3,17 +3,15 @@
   <footer class="bg-color text-white mt-6">
     <div class="container">
       <div class="row py-5">
-        <div class="col-12 col-md-6 col-lg-5">
-          <div class="row">
-            <div class="col-12 col-lg-8">
-              <img src="../assets/logo_white.svg" alt="" width="200" class="mb-3">
-              <p class="opacity-75">
-                {{ $t('footer.description') }}
-              </p>
-            </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="pe-lg-5 pe-0 pe-md-3">
+            <img src="../assets/logo_white.svg" alt="" width="200" class="mb-3">
+            <p class="opacity-75">
+              {{ $t('footer.description') }}
+            </p>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3 pe-5">
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
           <h6 class="text-uppercase fw-bold mb-4 text-white">
             {{ $t('footer.useful') }}
           </h6>
@@ -43,7 +41,7 @@
             </a>
           </p>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
           <h6 class="text-uppercase fw-bold mb-4">
             {{ $t('footer.contacts') }}
           </h6>

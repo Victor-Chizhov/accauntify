@@ -1,12 +1,12 @@
 <template>
   <section class="my-5 py-5">
     <div class="row justify-content-between">
-      <div class="col-12 col-sm-6 col-md-5 col-lg-4">
-        <h2 class="text-dark mb-4">
+      <div class="col-12 col-lg-5 col-md-5 col-lg-4">
+        <h2 class="text-dark mb-5 fs-1">
           {{ $t('about.title') }}
         </h2>
       </div>
-      <div class="col-12 col-sm-6 col-lg-7">
+      <div class="col-12 col-lg-6 col-lg-7">
         <p class="mb-3 text-justify">
           {{ $t('about.description', 1) }}
         </p>
