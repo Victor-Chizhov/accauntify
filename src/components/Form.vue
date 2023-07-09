@@ -30,13 +30,14 @@
                 :placeholder="$t('form.inputs.phone.placeholder')"
                 class="mb-4"
                 v-model="phone"
+                v-maska:[options]
               />
               <Button
                 :text="$t('form.buttons.submit.name')"
                 class="w-100 mb-3"
               />
               <p class="text-secondary text-center">
-                <small v-html="$t('form.buttons.submit.hint', { link: '!#' })" />
+                <small v-html="$t('form.buttons.submit.hint', { link: '/privacy-policy' })" />
               </p>
             </div>
           </div>

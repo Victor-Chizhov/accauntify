@@ -3,6 +3,7 @@ import messages from "@/messages";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faHome, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { vMaska } from "maska"
 
 
 import { createApp } from 'vue'
@@ -49,5 +50,6 @@ document.documentElement.lang = locale
 
 createApp(App)
     .use(i18n)
+    .directive("maska", vMaska)
     .component('font-awesome-icon', FontAwesomeIcon)
     .mount('#app');
