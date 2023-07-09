@@ -40,7 +40,14 @@
                 @click="handleSubmit"
               />
               <p class="text-secondary text-center">
-                <small v-html="$t('form.buttons.submit.hint', { link: '/privacy-policy' })" />
+                <small>
+                  {{ $t('form.buttons.submit.hint') }} <router-link
+                    to="/privacy-policy"
+                    class="text-secondary"
+                  >
+                    {{ $t('form.buttons.submit.link') }}
+                  </router-link>
+                </small>
               </p>
             </div>
           </div>

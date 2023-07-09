@@ -1,12 +1,12 @@
 <template>
   <section>
-    <div class="row mt-5 mb-5 bg-color">
-      <div class="col-sm-5 mt-5">
-        <h1 class="text-dark">
+    <div class="row mt-5 mb-5 pb-5 bg-color">
+      <div class="col-12 col-lg-6 mt-5">
+        <h2 class="text-dark fs-1">
           {{ $t('questions.title') }}
-        </h1>
+        </h2>
       </div>
-      <div class="col-sm-6 mt-5 text-dark fs-6">
+      <div class="col-12 col-lg-6 mt-5 text-dark fs-6">
         <div
             class="accordion"
             id="accordionPanelsStayOpenExample"
