@@ -18,27 +18,27 @@
             {{ $t('footer.useful') }}
           </h6>
           <p class="opacity-75">
-            <a href="#about" class="text-decoration-none text-white">
+            <a href="/#about" class="text-decoration-none text-white">
               {{ $t('footer.about') }}
             </a>
           </p>
           <p class="opacity-75">
-            <a href="#features" class="text-decoration-none text-white">
+            <a href="/#features" class="text-decoration-none text-white">
               {{ $t('footer.features') }}
             </a>
           </p>
           <p class="opacity-75">
-            <a href="#questions" class="text-decoration-none text-white">
+            <a href="/#questions" class="text-decoration-none text-white">
               {{ $t('footer.questions') }}
             </a>
           </p>
           <p class="opacity-75">
-            <a href="#trial" class="text-decoration-none text-white">
+            <a href="/#trial" class="text-decoration-none text-white">
               {{ $t('footer.trial') }}
             </a>
           </p>
           <p class="opacity-75">
-            <a href="#!" class="text-decoration-none text-white">
+            <a href="/#!" class="text-decoration-none text-white">
               {{ $t('footer.action') }}
             </a>
           </p>

@@ -10,8 +10,8 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link active fs-7" aria-current="page" href="#">Калькулятор</a>
-          <a class="nav-link fs-7" href="#about">{{ $t('navigation.about') }}</a>
-          <a class="nav-link fs-7" href="#contacts">{{ $t('navigation.contacts') }}</a>
+          <a class="nav-link fs-7" href="/#about">{{ $t('navigation.about') }}</a>
+          <a class="nav-link fs-7" href="/#contacts">{{ $t('navigation.contacts') }}</a>
         </div>
       </div>
     </div>

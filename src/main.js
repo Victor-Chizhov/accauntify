@@ -9,7 +9,7 @@ import { vMaska } from "maska"
 import { createApp } from 'vue'
 import { createI18n } from 'vue-i18n'
 import { createHead } from 'unhead'
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import App from './App.vue'
 import PrivacyPolicy from "@/components/PrivacyPolicy.vue";
 
@@ -29,12 +29,13 @@ const i18n = createI18n({
 const head = createHead();
 const router = createRouter({
     // todo for prod we can delete it
-    history: createWebHashHistory(),
+    history: createWebHistory(),
     routes: [
         {
             path: '/privacy-policy',
             component: PrivacyPolicy
-        }
+        },
+
     ],
     scrollBehavior(to, from, savedPosition) {
         if (to.hash) {
@@ -64,3 +65,5 @@ createApp(App)
     .component('font-awesome-icon', FontAwesomeIcon)
     .use(router)
     .mount('#app');
+
+export default router;
