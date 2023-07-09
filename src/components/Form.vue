@@ -64,15 +64,21 @@ import Button from "@/components/Form/Button.vue";
 import { reactive } from "vue"
 import {
     phoneMask,
+    getMask,
     isEmpty,
     clearErrors,
-    requiredError
+    requiredError,
+    minLengthError
 } from "@/inputs";
+import post from "@/request";
+import { toast } from "vue3-toastify";
+import { useI18n } from "vue-i18n";
 
 const options = reactive({
     mask: (value) => phoneMask(value),
     eager: false,
-})
+});
+const { t } = useI18n();
 
 const name = ref(null);
 const phone = ref(null);
@@ -81,7 +87,7 @@ const errors = ref({
     phone: null
 });
 
-const handleSubmit = () => {
+const handleSubmit = async () => {
     clearErrors(errors);
 
     if (isEmpty(name.value)) {
@@ -92,7 +98,24 @@ const handleSubmit = () => {
         return requiredError(errors, 'phone');
     }
 
-    // todo request
+    const countryCode = phone.value.split(' ')[0];
+    const mask = getMask(countryCode);
+
+    if (phone.value.length !== mask.length) {
+        return minLengthError(errors, mask.length, 'phone')
+    }
+
+    try {
+        await post('/api/telegram', {
+            name: name.value,
+            phone: phone.value
+        });
+        name.value = null;
+        phone.value = null;
+        toast.success(t('messages.success'));
+    } catch (e) {
+        toast.error(e.message);
+    }
 }
 
 </script>

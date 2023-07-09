@@ -15,6 +15,10 @@ export default defineConfig({
           src: path.resolve(`${__dirname}/src`, './static') + '/[!.]*', // 1️⃣
           dest: './static', // 2️⃣
         },
+        {
+          src: path.resolve(`${__dirname}/src`, './api') + '/[!.]*', // 1️⃣
+          dest: './api', // 2️⃣
+        },
       ],
     }),
   ],

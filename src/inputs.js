@@ -322,8 +322,34 @@ export const phoneMask = (value) => {
     });
 }
 
+export const getMask = (countyCode) => {
+    let matrix = '+###############';
+
+    if (countyCode === null) {
+        return null;
+    }
+
+    maskList.forEach(item => {
+        let code = item.code.replace(/[\s#]/g, ''),
+            phone = countyCode.replace(/[\s#-)(]/g, '');
+
+        if (phone.includes(code)) {
+            matrix = item.code;
+        }
+    });
+
+    return matrix;
+}
+
 export const isEmpty = (value) => {
     return !value || value.length === 0;
+}
+
+export const minLength = (value, min) => {
+    if (!value) {
+        return false;
+    }
+    return value.length >= min;
 }
 
 export const clearErrors = (ref) => {
@@ -349,6 +375,29 @@ export const requiredError = (ref, key = null) => {
         if (validation) {
             if ('required' in validation) {
                 message = validation['required']
+            }
+        }
+        ref.value[key] = message;
+    }
+
+    return false;
+}
+
+export const minLengthError = (ref, min, key = null) => {
+    const value = ref.value;
+
+    if (typeof value === 'object' && key) {
+        let lang = locale;
+        let message = 'Field length is not correct';
+        let validation = null;
+
+        if (!(locale in messages)) {
+            lang = LANGUAGE_DEFAULT;
+        }
+        validation = messages[lang]['validation'];
+        if (validation) {
+            if ('min' in validation) {
+                message = validation['min'].replace('{min}', min);
             }
         }
         ref.value[key] = message;

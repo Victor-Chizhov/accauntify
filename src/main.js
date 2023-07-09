@@ -4,6 +4,9 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faHome, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { vMaska } from "maska"
+// toast
+import Vue3Toastify from "vue3-toastify"
+import 'vue3-toastify/dist/index.css';
 
 
 import { createApp } from 'vue'
@@ -64,6 +67,7 @@ createApp(App)
     .directive("maska", vMaska)
     .component('font-awesome-icon', FontAwesomeIcon)
     .use(router)
+    .use(Vue3Toastify)
     .mount('#app');
 
 export default router;
