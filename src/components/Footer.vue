@@ -13,7 +13,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-md-6 col-lg-3 pe-5">
           <h6 class="text-uppercase fw-bold mb-4 text-white">
             {{ $t('footer.useful') }}
           </h6>
@@ -42,11 +42,6 @@
               {{ $t('footer.action') }}
             </a>
           </p>
-          <p class="opacity-75">
-            <a href="#!" class="text-decoration-none text-white">
-              {{ $t('footer.license') }}
-            </a>
-          </p>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
           <h6 class="text-uppercase fw-bold mb-4">
@@ -63,6 +58,11 @@
           <p class="opacity-75">
             <font-awesome-icon icon="fa-solid fa-phone" class="me-3" />
             + 374 55 498401
+          </p>
+          <p class="opacity-75 mt-5 underline">
+            <router-link to="/privacy-policy" class="text-decoration-none text-white">
+              {{ $t('footer.license') }}
+            </router-link>
           </p>
         </div>
       </div>
@@ -89,4 +89,9 @@
   background-color: #537379;
   background-size: cover;
 }
+
+.underline {
+  text-decoration: underline;
+}
+
 </style>

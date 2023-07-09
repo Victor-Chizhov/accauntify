@@ -11,6 +11,9 @@ import { createI18n } from 'vue-i18n'
 import { createHead } from 'unhead'
 import { createRouter, createWebHashHistory } from "vue-router";
 import App from './App.vue'
+import PrivacyPolicy from "@/components/PrivacyPolicy.vue";
+
+
 
 export const LANGUAGE_DEFAULT = 'ru';
 export const url = new URL(window.location.href);
@@ -22,11 +25,17 @@ const i18n = createI18n({
     fallbackLocale: LANGUAGE_DEFAULT,
     messages,
 });
+
 const head = createHead();
 const router = createRouter({
     // todo for prod we can delete it
     history: createWebHashHistory(),
-    routes: [],
+    routes: [
+        {
+            path: '/privacy-policy',
+            component: PrivacyPolicy
+        }
+    ],
     scrollBehavior(to, from, savedPosition) {
         if (to.hash) {
             return {
@@ -34,6 +43,7 @@ const router = createRouter({
                 behavior: 'smooth'
             }
         }
+        return { top: 0 }
     }
 });
 
@@ -52,4 +62,5 @@ createApp(App)
     .use(i18n)
     .directive("maska", vMaska)
     .component('font-awesome-icon', FontAwesomeIcon)
+    .use(router)
     .mount('#app');
